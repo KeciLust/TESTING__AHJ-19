@@ -11,6 +11,7 @@ button.addEventListener('click', (e) => {
   if (luhn(input.value)) {
     const cart = document.querySelector(`.${check(input.value)}`);
     if (cart) {
+      cart.classList.add('valid');
       cart.classList.remove('opacity');
       input.value = '';
     } else {
